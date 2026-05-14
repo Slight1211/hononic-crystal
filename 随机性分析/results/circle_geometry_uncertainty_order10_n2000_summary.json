@@ -1,0 +1,80 @@
+{
+  "settings": {
+    "samples": 2000,
+    "source_batches": [
+      "C:\\Users\\Sligh\\Desktop\\Npw\\uncertainty_geometry_circle_order10_n1000\\circle_geometry_uncertainty_order10_samples.csv",
+      "C:\\Users\\Sligh\\Desktop\\Npw\\uncertainty_geometry_circle_order10_n1000_extra\\circle_geometry_uncertainty_order10_samples.csv"
+    ],
+    "order": 10,
+    "nodes": 96,
+    "points_per_segment": 15,
+    "bands": 12,
+    "target_gap_index": 3,
+    "radius_ratio": 0.26,
+    "modes": 6,
+    "coefficient_sigma": 0.08,
+    "relative_radial_bound": 0.05,
+    "area_normalized": true,
+    "first_complete_gap_counts": {
+      "3": 2000
+    },
+    "batch_elapsed_seconds": [
+      2590.776228427887,
+      2460.4919650554657
+    ]
+  },
+  "baseline": {
+    "gap_index": 3,
+    "first_complete_gap_index": 3,
+    "lower_khz": 15.627994501693653,
+    "upper_khz": 21.654744005160506,
+    "width_khz": 6.026749503466853
+  },
+  "statistics": {
+    "lower_khz": {
+      "mean": 15.629642009436273,
+      "std": 0.009048587713435956,
+      "min": 15.60270771076772,
+      "p05": 15.615352541270925,
+      "p50": 15.629407255222715,
+      "p95": 15.64456150885673,
+      "max": 15.670334633487885
+    },
+    "upper_khz": {
+      "mean": 21.583104010364128,
+      "std": 0.08774254742624926,
+      "min": 21.26286857985943,
+      "p05": 21.407954986503427,
+      "p50": 21.608046074061477,
+      "p95": 21.68495899158888,
+      "max": 21.73759012905907
+    },
+    "width_khz": {
+      "mean": 5.953462000927853,
+      "std": 0.08658255832474233,
+      "min": 5.62603999634921,
+      "p05": 5.779216869049151,
+      "p50": 5.9791339389892855,
+      "p95": 6.047696990766488,
+      "max": 6.078972177300809
+    },
+    "max_abs_radial_perturbation": {
+      "mean": 0.03473473928304682,
+      "std": 0.008698838501648229,
+      "min": 0.0104768497184962,
+      "p05": 0.019319459980092726,
+      "p50": 0.03527675407073675,
+      "p95": 0.047767662026712884,
+      "max": 0.0499804185925982
+    },
+    "rms_radial_perturbation": {
+      "mean": 0.017656012457587,
+      "std": 0.0051073892182087735,
+      "min": 0.0047376921171146,
+      "p05": 0.00939254330373672,
+      "p50": 0.0177080723435502,
+      "p95": 0.026233402100078185,
+      "max": 0.0320910212000117
+    }
+  }
+}
