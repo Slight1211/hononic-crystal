@@ -1,0 +1,110 @@
+[
+  {
+    "name": "baseline_h224_l8",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "dropout005",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.05,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "dropout015",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.15,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "dropout020",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.20,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "lr0002",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0002,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "lr0004",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0004,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "lr0005",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0005,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "width192",
+    "hidden_dim": 192,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "width256",
+    "hidden_dim": 256,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "layers6",
+    "hidden_dim": 224,
+    "layers": 6,
+    "dropout": 0.10,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "layers10",
+    "hidden_dim": 224,
+    "layers": 10,
+    "dropout": 0.10,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 1.0
+  },
+  {
+    "name": "huber_beta05",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.10,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "smooth_l1_beta": 0.5
+  }
+]
