@@ -1,0 +1,54 @@
+[
+  {
+    "name": "gamma075_sampler035",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.35,
+    "focal_gamma": 0.75,
+    "label_smoothing": 0.01
+  },
+  {
+    "name": "gamma050_sampler035",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.35,
+    "focal_gamma": 0.50,
+    "label_smoothing": 0.01
+  },
+  {
+    "name": "gamma100_sampler025",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.25,
+    "focal_gamma": 1.00,
+    "label_smoothing": 0.01
+  },
+  {
+    "name": "gamma100_sampler045",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.45,
+    "focal_gamma": 1.00,
+    "label_smoothing": 0.01
+  }
+]

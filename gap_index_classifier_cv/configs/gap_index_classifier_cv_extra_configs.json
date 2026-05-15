@@ -1,0 +1,54 @@
+[
+  {
+    "name": "hidden192_layers8",
+    "hidden_dim": 192,
+    "layers": 8,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.35,
+    "focal_gamma": 1.0,
+    "label_smoothing": 0.01
+  },
+  {
+    "name": "hidden224_layers6",
+    "hidden_dim": 224,
+    "layers": 6,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.35,
+    "focal_gamma": 1.0,
+    "label_smoothing": 0.01
+  },
+  {
+    "name": "hidden224_layers10",
+    "hidden_dim": 224,
+    "layers": 10,
+    "dropout": 0.08,
+    "lr": 0.0003,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.35,
+    "focal_gamma": 1.0,
+    "label_smoothing": 0.01
+  },
+  {
+    "name": "lr0004",
+    "hidden_dim": 224,
+    "layers": 8,
+    "dropout": 0.08,
+    "lr": 0.0004,
+    "weight_decay": 0.00001,
+    "class_weight_scheme": "sqrt_inverse",
+    "sampler": "weighted",
+    "sampler_power": 0.35,
+    "focal_gamma": 1.0,
+    "label_smoothing": 0.01
+  }
+]
