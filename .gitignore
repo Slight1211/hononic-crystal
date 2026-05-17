@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+
+# Large local training artifacts.
+*.pt
+*.pth
+*.ckpt
+*.csv
+
+# Local run/log directories produced by the training launchers.
+overnight_training_logs/
+gap_index_classifier_full_runs/
+gap_index_classifier_full_60pct_runs/
+gap2_regressor_full_best_runs/
+gap3_regressor_full_best_runs/
+gnn_gap_regressors_parallel_runs/

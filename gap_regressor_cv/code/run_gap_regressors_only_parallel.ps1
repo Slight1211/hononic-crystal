@@ -1,6 +1,7 @@
 param(
     [string]$PreprocessedRoot = "E:\datasets_graph_cache_novel109_top_batches001_600_20260512\source_000",
-    [string]$OutputDir = "C:\Users\Sligh\Desktop\Npw\gnn_gap_regressors_parallel_runs",
+    [string]$ProjectRoot = "",
+    [string]$OutputDir = "",
     [int]$RegressorEpochs = 20,
     [int]$BatchSize = 96,
     [int]$HiddenDim = 224,
@@ -16,8 +17,18 @@ param(
 $ErrorActionPreference = "Stop"
 $env:PYTHONUNBUFFERED = "1"
 
-$ProjectRoot = "C:\Users\Sligh\Desktop\Npw"
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+if ($ProjectRoot -eq "") {
+    $ProjectRoot = (Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+}
+if ($OutputDir -eq "") {
+    $OutputDir = Join-Path $ProjectRoot "gnn_gap_regressors_parallel_runs"
+}
+
 $Python = Join-Path $ProjectRoot ".venv-gnn-cu128\Scripts\python.exe"
+if (-not (Test-Path $Python)) {
+    $Python = "python"
+}
 $LogDir = Join-Path $ProjectRoot "overnight_training_logs\gap_regressors_parallel_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
@@ -38,16 +49,13 @@ try {
     Write-Log "RegressorEpochs=$RegressorEpochs BatchSize=$BatchSize"
     Write-Log "NumWorkers=$NumWorkers RegressorNames=$RegressorNames"
 
-    if (-not (Test-Path $Python)) {
-        throw "Python environment not found: $Python"
-    }
     if (-not (Test-Path $PreprocessedRoot)) {
         throw "Preprocessed root not found: $PreprocessedRoot"
     }
 
     "RUNNING: regressor-only parallel" | Set-Content -Path $StatusPath -Encoding UTF8
     $TrainArgs = @(
-        (Join-Path $ProjectRoot "train_gap_regressors_only.py"),
+        (Join-Path $ScriptDir "train_gap_regressors_only.py"),
         "--preprocessed-root", $PreprocessedRoot,
         "--output-dir", $OutputDir,
         "--max-batches", "0",

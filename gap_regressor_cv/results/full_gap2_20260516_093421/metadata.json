@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-05-16T09:36:18.541769",
+  "preprocessed_roots": [
+    "E:\\datasets_graph_cache_novel109_top_batches001_600_20260512\\source_000"
+  ],
+  "major_gap_indices": [
+    2,
+    3
+  ],
+  "group_names": [
+    "gap2",
+    "gap3",
+    "other"
+  ],
+  "graph_feature_mode": "novel105_phase_edge_shell",
+  "graph_feature_dim": 105,
+  "train_samples": 1386955,
+  "val_samples": 173302,
+  "test_samples": 173386,
+  "train_group_counts": [
+    96313,
+    1277275,
+    13367
+  ],
+  "val_group_counts": [
+    11964,
+    159718,
+    1620
+  ],
+  "test_group_counts": [
+    12027,
+    159670,
+    1689
+  ],
+  "unique_positive_gap_samples": 1733643,
+  "duplicate_samples_skipped": 0,
+  "no_gap_samples_skipped": 12357,
+  "sample_index_filtered_skipped": 0,
+  "device": "cuda",
+  "amp_mode": "bf16",
+  "regressor_epochs": 20,
+  "batch_size": 256,
+  "num_workers": 3,
+  "regressor_filter": [
+    "gap2_expert"
+  ],
+  "hidden_dim": 224,
+  "layers": 8,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "weight_decay": 1e-05,
+  "seed": 20260508
+}

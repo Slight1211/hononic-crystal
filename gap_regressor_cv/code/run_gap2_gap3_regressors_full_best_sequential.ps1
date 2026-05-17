@@ -1,13 +1,18 @@
 param(
     [string]$PreprocessedRoot = "E:\datasets_graph_cache_novel109_top_batches001_600_20260512\source_000",
-    [string]$ProjectRoot = "C:\Users\Sligh\Desktop\Npw",
+    [string]$ProjectRoot = "",
     [int]$RegressorEpochs = 20,
     [int]$BatchSize = 256
 )
 
 $ErrorActionPreference = "Stop"
 
-$Runner = Join-Path $ProjectRoot "run_gap_regressors_only_parallel.ps1"
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+if ($ProjectRoot -eq "") {
+    $ProjectRoot = (Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+}
+
+$Runner = Join-Path $ScriptDir "run_gap_regressors_only_parallel.ps1"
 if (-not (Test-Path $Runner)) {
     throw "Runner not found: $Runner"
 }
