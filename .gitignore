@@ -9,6 +9,8 @@ __pycache__/
 *.pkl
 *.npz
 *.log
+!trained_models/
+!trained_models/*.pt
 
 # Generated datasets can be very large; keep only scripts, configs, and summaries.
 datasets/
