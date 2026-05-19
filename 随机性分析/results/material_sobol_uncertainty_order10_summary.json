@@ -1,7 +1,7 @@
 {
   "settings": {
-    "base_samples": 1000,
-    "evaluations": 6000,
+    "base_samples": 1024,
+    "evaluations": 6144,
     "inputs": [
       "steel_E",
       "steel_rho",
@@ -28,7 +28,7 @@
       16
     ],
     "workers": 10,
-    "elapsed_seconds": 2068.643918275833,
+    "elapsed_seconds": 3154.847713947296,
     "note": "All Sobol design points are directly evaluated by node-based PWE; no interpolation or surrogate model is used.",
     "nominal_materials": {
       "steel": {
@@ -56,85 +56,85 @@
   "sobol": {
     "lower_khz": {
       "label": "Lower edge",
-      "mean": 15.628955796891615,
-      "std": 0.2872783331422748,
-      "variance": 0.08252884069300383,
+      "mean": 15.629025149271321,
+      "std": 0.28769106393266725,
+      "variance": 0.08276614826671004,
       "factors": {
         "steel_E": {
           "label": "Steel $E$",
-          "first_order": 5.756090990309082e-05,
-          "total_order": 1.5686122994606828e-05
+          "first_order": 1.4847586010766802e-05,
+          "total_order": 1.554737366540218e-05
         },
         "steel_rho": {
           "label": "Steel $\\rho$",
-          "first_order": 0.38677657679740035,
-          "total_order": 0.35510385367648967
+          "first_order": 0.35444601706762613,
+          "total_order": 0.35462065835582124
         },
         "epoxy_E": {
           "label": "Epoxy $E$",
-          "first_order": 0.6053352317988016,
-          "total_order": 0.6093871075564591
+          "first_order": 0.6090200570355987,
+          "total_order": 0.6091515731894107
         },
         "epoxy_rho": {
           "label": "Epoxy $\\rho$",
-          "first_order": 0.04363990960400426,
-          "total_order": 0.036033958748943065
+          "first_order": 0.035864479835674624,
+          "total_order": 0.03585426259843403
         }
       }
     },
     "upper_khz": {
       "label": "Upper edge",
-      "mean": 21.658810017472597,
-      "std": 0.40612004312437405,
-      "variance": 0.16493348942734345,
+      "mean": 21.658804126331873,
+      "std": 0.4077808278011836,
+      "variance": 0.16628520352221854,
       "factors": {
         "steel_E": {
           "label": "Steel $E$",
-          "first_order": 0.00043464641144874103,
-          "total_order": 0.0002004809937532161
+          "first_order": 0.0003880657401131385,
+          "total_order": 0.0001977084393123968
         },
         "steel_rho": {
           "label": "Steel $\\rho$",
-          "first_order": 0.021343457564729808,
-          "total_order": 0.014711120632038239
+          "first_order": 0.014930313553357008,
+          "total_order": 0.014615213259755558
         },
         "epoxy_E": {
           "label": "Epoxy $E$",
-          "first_order": 0.5641269804613193,
-          "total_order": 0.570067671132703
+          "first_order": 0.5667481175906762,
+          "total_order": 0.566846792322195
         },
         "epoxy_rho": {
           "label": "Epoxy $\\rho$",
-          "first_order": 0.44187529917886753,
-          "total_order": 0.42214958574606215
+          "first_order": 0.4179044018485177,
+          "total_order": 0.4179325197488643
         }
       }
     },
     "width_khz": {
       "label": "Width",
-      "mean": 6.029854220580977,
-      "std": 0.255560049404565,
-      "variance": 0.06531093885166371,
+      "mean": 6.029778977060551,
+      "std": 0.25593826533675496,
+      "variance": 0.06550439566358718,
       "factors": {
         "steel_E": {
           "label": "Steel $E$",
-          "first_order": 0.0003546964835849529,
-          "total_order": 0.00032579102650573546
+          "first_order": 0.0004721075693784563,
+          "total_order": 0.00032298129743856186
         },
         "steel_rho": {
           "label": "Steel $\\rho$",
-          "first_order": 0.21900956599368723,
-          "total_order": 0.22770255751227844
+          "first_order": 0.22762899949784116,
+          "total_order": 0.22736235867865817
         },
         "epoxy_E": {
           "label": "Epoxy $E$",
-          "first_order": 0.10189906660851034,
-          "total_order": 0.10405875974379457
+          "first_order": 0.10384800091891466,
+          "total_order": 0.10401279997388885
         },
         "epoxy_rho": {
           "label": "Epoxy $\\rho$",
-          "first_order": 0.6803498012896017,
-          "total_order": 0.6713433112453923
+          "first_order": 0.6679135058505259,
+          "total_order": 0.6681487513848657
         }
       }
     }
