@@ -229,7 +229,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Sobol global sensitivity analysis for circular-scatterer material uncertainty."
     )
-    parser.add_argument("--base-samples", type=int, default=256)
+    parser.add_argument("--base-samples", type=int, default=1000)
     parser.add_argument("--order", type=int, default=10)
     parser.add_argument("--nodes", type=int, default=96)
     parser.add_argument("--points-per-segment", type=int, default=15)
@@ -243,7 +243,7 @@ def main() -> None:
     parser.add_argument(
         "--out-dir",
         type=Path,
-        default=Path("uncertainty_material_sobol_order10_n256"),
+        default=Path("uncertainty_material_sobol_order10_n1000"),
     )
     parser.add_argument(
         "--figure-dir",

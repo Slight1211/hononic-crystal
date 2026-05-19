@@ -30,7 +30,7 @@
 - `figures/material_oat_uncertainty_order10_n300.pdf`  
   四个材料属性 \(E_s\)、\(\rho_s\)、\(E_e\)、\(\rho_e\) 的随机性分布图。
 
-- `figures/material_sobol_uncertainty_order10_n256.pdf`  
+- `figures/material_sobol_uncertainty_order10_n1000.pdf`  
   四个材料属性对下带隙边界、上带隙边界和带隙宽度的一阶与总阶
   Sobol 灵敏度指数。
 
@@ -40,8 +40,8 @@
 - `figures/geometry_uncertainty_order10_n2000.pdf`  
   5% 和 10% 几何扰动下的带隙边界与带宽分布图。
 
-- `results/*.json`  
-  随机性分析的统计结果汇总。
+- `results/*.json` and `results/*.csv`  
+  随机性分析的统计结果汇总和 Sobol 设计点逐样本计算结果。
 
 ## 复现说明
 
@@ -62,7 +62,7 @@ py -3.11 ".\随机性分析\code\circle_material_oat_direct_uncertainty_order10.
 材料属性 Sobol 全局灵敏度分析可运行：
 
 ```powershell
-py -3.11 ".\随机性分析\code\circle_material_sobol_uncertainty_order10.py" --base-samples 256 --workers 8
+py -3.11 ".\随机性分析\code\circle_material_sobol_uncertainty_order10.py" --base-samples 1000 --workers 10
 ```
 
 5% 几何随机性分析可运行：
