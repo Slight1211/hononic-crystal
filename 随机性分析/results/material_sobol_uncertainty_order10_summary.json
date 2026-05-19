@@ -1,0 +1,142 @@
+{
+  "settings": {
+    "base_samples": 256,
+    "evaluations": 1536,
+    "inputs": [
+      "steel_E",
+      "steel_rho",
+      "epoxy_E",
+      "epoxy_rho"
+    ],
+    "distribution": "independent uniform material factors",
+    "relative_bound": 0.05,
+    "order": 10,
+    "nodes": 96,
+    "points_per_segment": 15,
+    "bands": 12,
+    "target_gap_index": 3,
+    "seed": 20260519,
+    "k_indices": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "workers": 8,
+    "elapsed_seconds": 581.5882985591888,
+    "note": "All Sobol design points are directly evaluated by node-based PWE; no interpolation or surrogate model is used.",
+    "nominal_materials": {
+      "steel": {
+        "name": "steel",
+        "density": 7780.0,
+        "young_modulus": 210600000000.0,
+        "shear_modulus": 81000000000.0
+      },
+      "steel_poisson_ratio": 0.30000000000000004,
+      "epoxy": {
+        "name": "epoxy",
+        "density": 1180.0,
+        "young_modulus": 4350000000.0,
+        "shear_modulus": 1590000000.0
+      },
+      "epoxy_poisson_ratio": 0.3679245283018868
+    }
+  },
+  "baseline": {
+    "gap_index": 3,
+    "lower_khz": 15.62799450169729,
+    "upper_khz": 21.654744005160225,
+    "width_khz": 6.026749503462936
+  },
+  "sobol": {
+    "lower_khz": {
+      "label": "Lower edge",
+      "mean": 15.629024373651035,
+      "std": 0.28795273459223203,
+      "variance": 0.08291677735914443,
+      "factors": {
+        "steel_E": {
+          "label": "Steel $E$",
+          "first_order": 2.210519788119624e-05,
+          "total_order": 1.5546017764974506e-05
+        },
+        "steel_rho": {
+          "label": "Steel $\\rho$",
+          "first_order": 0.3449745472449594,
+          "total_order": 0.35379864604402744
+        },
+        "epoxy_E": {
+          "label": "Epoxy $E$",
+          "first_order": 0.594358500489401,
+          "total_order": 0.5939869102086496
+        },
+        "epoxy_rho": {
+          "label": "Epoxy $\\rho$",
+          "first_order": 0.03916173176397711,
+          "total_order": 0.03578840033247212
+        }
+      }
+    },
+    "upper_khz": {
+      "label": "Upper edge",
+      "mean": 21.6588189419933,
+      "std": 0.4081277124243372,
+      "variance": 0.1665682296487225,
+      "factors": {
+        "steel_E": {
+          "label": "Steel $E$",
+          "first_order": 0.001875454207273469,
+          "total_order": 0.0001979053963272465
+        },
+        "steel_rho": {
+          "label": "Steel $\\rho$",
+          "first_order": 0.008205668379039618,
+          "total_order": 0.014577697709523598
+        },
+        "epoxy_E": {
+          "label": "Epoxy $E$",
+          "first_order": 0.5523746064765965,
+          "total_order": 0.5526763813767954
+        },
+        "epoxy_rho": {
+          "label": "Epoxy $\\rho$",
+          "first_order": 0.41500760044397983,
+          "total_order": 0.41732574740072187
+        }
+      }
+    },
+    "width_khz": {
+      "label": "Width",
+      "mean": 6.0297945683422665,
+      "std": 0.25603268904246906,
+      "variance": 0.06555273785831765,
+      "factors": {
+        "steel_E": {
+          "label": "Steel $E$",
+          "first_order": 0.0018644890165626323,
+          "total_order": 0.00032368938616108694
+        },
+        "steel_rho": {
+          "label": "Steel $\\rho$",
+          "first_order": 0.22667396919631203,
+          "total_order": 0.22711264435387865
+        },
+        "epoxy_E": {
+          "label": "Epoxy $E$",
+          "first_order": 0.10099426013760664,
+          "total_order": 0.10142691232186589
+        },
+        "epoxy_rho": {
+          "label": "Epoxy $\\rho$",
+          "first_order": 0.6544522731741552,
+          "total_order": 0.6679006723108253
+        }
+      }
+    }
+  }
+}

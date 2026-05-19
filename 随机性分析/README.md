@@ -14,6 +14,11 @@
   保持标称值不变；每组 300 个样本均直接调用节点法 PWE 计算，
   不使用插值。
 
+- `code/circle_material_sobol_uncertainty_order10.py`  
+  材料属性 Sobol 全局灵敏度分析。四个材料输入因子同时在
+  \(\pm5\%\) 范围内变化，采用 Saltelli 型采样设计，并直接调用
+  节点法 PWE 计算一阶和总阶 Sobol 指数。
+
 - `code/circle_geometry_uncertainty_order10.py`  
   几何随机性分析。通过平滑径向 Fourier 扰动生成非规则圆形边界，
   并用节点法离散为多边形。
@@ -24,6 +29,10 @@
 
 - `figures/material_oat_uncertainty_order10_n300.pdf`  
   四个材料属性 \(E_s\)、\(\rho_s\)、\(E_e\)、\(\rho_e\) 的随机性分布图。
+
+- `figures/material_sobol_uncertainty_order10_n256.pdf`  
+  四个材料属性对下带隙边界、上带隙边界和带隙宽度的一阶与总阶
+  Sobol 灵敏度指数。
 
 - `figures/geometry_uncertainty_examples.pdf`  
   标称圆形、5% 几何扰动和 10% 几何扰动示意图。
@@ -48,6 +57,12 @@ matplotlib
 
 ```powershell
 py -3.11 ".\随机性分析\code\circle_material_oat_direct_uncertainty_order10.py" --samples 300 --workers 6
+```
+
+材料属性 Sobol 全局灵敏度分析可运行：
+
+```powershell
+py -3.11 ".\随机性分析\code\circle_material_sobol_uncertainty_order10.py" --base-samples 256 --workers 8
 ```
 
 5% 几何随机性分析可运行：
