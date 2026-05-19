@@ -1,0 +1,19 @@
+{
+  "total_samples": 1746000,
+  "chunk_size": 250,
+  "order": 10,
+  "points_per_segment": 21,
+  "bands_to_keep": 12,
+  "min_sector_vertices": 1,
+  "max_sector_vertices": 8,
+  "min_area_fraction": 0.04,
+  "max_area_fraction": 0.72,
+  "sampling_mode": "square_bounded",
+  "base_seed": 20260510,
+  "cpu_fraction": 0.3,
+  "max_workers": 12,
+  "start_index": 0,
+  "batch_id": "full_square_bounded",
+  "output_dir": "../datasets/full_square_bounded",
+  "resume": true
+}
